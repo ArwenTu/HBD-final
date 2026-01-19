@@ -28,7 +28,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             className="h-40 md:h-52"
           >
             <div className="flex flex-col items-center">
-              <span className="text-2xl mb-2 pixel-chinese">序號兌換</span>
+              <span className="text-2xl mb-2 pixel-chinese">點此輸入序號</span>
               <span className="pixel-font text-[10px] opacity-70">REDEEM CODE</span>
             </div>
           </PixelButton>
@@ -42,7 +42,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             className="h-40 md:h-52"
           >
             <div className="flex flex-col items-center">
-              <span className="text-2xl mb-2 pixel-chinese">酒後吐真言</span>
+              <span className="text-2xl mb-2 pixel-chinese">向壽星告解區</span>
               <span className="pixel-font text-[10px] opacity-70">DRUNK TRUTHS</span>
             </div>
           </PixelButton>

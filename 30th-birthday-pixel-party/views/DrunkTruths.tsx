@@ -12,8 +12,8 @@ const DrunkTruths: React.FC<DrunkTruthsProps> = ({ onNavigate, onBack }) => {
   return (
     <div className="flex flex-col items-center gap-8 animate-in slide-in-from-right-10 duration-500">
       <div className="text-center mb-4">
-        <h2 className="pixel-chinese text-2xl md:text-3xl text-purple-400 mb-2">想跟誰吐露酒後心聲</h2>
-        <p className="pixel-chinese text-slate-400 text-sm">點擊下方按鈕留言給壽星</p>
+        <h2 className="pixel-chinese text-2xl md:text-3xl text-purple-400 mb-2">壽星神腹 我有醉</h2>
+        <p className="pixel-chinese text-slate-400 text-sm">選擇壽星吐酒後心聲</p>
       </div>
 
       <div className="w-full flex flex-col gap-6">

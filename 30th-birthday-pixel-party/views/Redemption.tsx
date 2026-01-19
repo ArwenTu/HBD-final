@@ -3,14 +3,16 @@ import React, { useState } from 'react';
 import PixelButton from '../components/PixelButton';
 
 const RESULTS = [
-  "恭喜獲得：壽星誇你1句",
-  "恭喜獲得：跟壽星喝一杯",
-  "恭喜獲得：壽星罵你1句",
-  "恭喜獲得：跟壽星合照鬼臉1張",
+  "恭喜獲得：壽星誇你一句＋敬壽星1杯",
+  "恭喜獲得：跟壽星一起敲杯shot掉",
+  "恭喜獲得：壽星罵你一句＋壽星喝1杯",
+  "恭喜獲得：跟壽星合照鬼臉1張（不夠鬼的喝1杯）",
   "恭喜獲得：限量神秘小禮（送完就改成跟壽星喝1杯）",
-  "恭喜獲得：兩壽星喝交杯酒3杯",
-  "恭喜獲得：跟壽星合照裝可愛1張",
-  "恭喜獲得：大家一起喝1杯"
+  "恭喜獲得：兩位壽星喝交杯酒",
+  "恭喜獲得：跟壽星合照裝可愛1張（不可愛的喝1杯）",
+  "恭喜獲得：跟壽星合照裝B照1張（不夠B的喝1杯）",
+  "恭喜獲得：大家一起拎齁搭",
+  "恭喜獲得：壽星大聲自誇＋全體喝1杯",
 ];
 
 interface RedemptionProps {
@@ -70,7 +72,7 @@ const Redemption: React.FC<RedemptionProps> = ({ onBack }) => {
     <div className="flex flex-col items-center gap-8 animate-in slide-in-from-bottom-10 duration-500">
       <div className="text-center mb-4">
         <h2 className="pixel-chinese text-2xl text-blue-400 mb-2">序號兌換</h2>
-        <p className="pixel-chinese text-slate-400 text-sm">請輸入您的三位數幸運代碼</p>
+        <p className="pixel-chinese text-slate-400 text-sm">請輸入你的三位數幸運代碼</p>
       </div>
 
       <div className="w-full flex flex-col gap-6">
