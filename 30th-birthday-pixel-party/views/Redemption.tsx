@@ -92,8 +92,7 @@ const Redemption: React.FC<RedemptionProps> = ({ onBack }) => {
           onClick={handleConfirm}
           className={isSpinning ? 'opacity-50 cursor-not-allowed' : ''}
         >
-          <span className="pixel-chinese">{'正在隨機抽取...' : '確認'}</span>
-          #<span className="pixel-chinese">{isSpinning ? '正在隨機抽取...' : '確認'}</span>
+          <span className="pixel-chinese">{isSpinning ? '正在隨機抽取...' : '確認'}</span>
         </PixelButton>
 
         <PixelButton variant="outline" size="full" onClick={onBack}>
