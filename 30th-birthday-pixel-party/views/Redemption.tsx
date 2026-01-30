@@ -1,18 +1,31 @@
-
 import React, { useState } from 'react';
 import PixelButton from '../components/PixelButton';
 
-const RESULTS = [
+// 1. 定義固定號碼的對應表
+const FIXED_RESULTS: Record<string, string> = {
+  "030": "獲得：限量神秘小禮",
+  "001": "獲得：看2位壽星喝交杯酒＋限量神秘小禮",
+  "099": "獲得：大家喝酒",
+  "087": "獲得：2位壽星誇你一句＋跟壽星喝1杯",
+  "111": "獲得：跟2位壽星一起shot掉＋限量神秘小禮",
+  "123": "獲得：誇2位壽星一句＋壽星喝1杯",
+  "777": "獲得：限量神秘小禮",
+  "888": "獲得：限量神秘小禮",
+  "999": "獲得：大家喝酒",
+  "000": "獲得：跟2位壽星一起shot掉＋限量神秘小禮",
+  "321": "獲得：看2位壽星喝交杯酒＋限量神秘小禮",
+  "666": "獲得：限量神秘小禮",
+};
+
+// 2. 定義非固定號碼時的隨機池 (根據你的需求移除有小禮物的選項)
+const RANDOM_RESULTS = [
   "獲得：誇2位壽星一句＋壽星喝1杯",
   "獲得：跟2位壽星一起shot掉",
   "獲得：2位壽星誇你一句＋跟壽星喝1杯",
-  "獲得：跟2位壽星合照鬼臉1張（不夠鬼的喝1杯）",
-  "獲得：限量神秘小禮（送完改成跟壽星喝1杯）",
   "獲得：看2位壽星喝交杯酒",
-  "獲得：跟2位壽星合照裝可愛1張（不可愛的喝1杯）",
-  "獲得：跟2位壽星合照裝B照1張（不夠B的喝1杯）",
-  "獲得：大家舉杯喝酒",
-  "獲得：2位壽星自誇一句(不重複)＋全體喝1杯",
+  "獲得：大家喝酒",
+  "獲得：跟2位壽星拍中二照（不中二的喝）",
+  "獲得：跟2位壽星拍鬼臉照（不夠鬼的喝）",
 ];
 
 interface RedemptionProps {
@@ -31,10 +44,18 @@ const Redemption: React.FC<RedemptionProps> = ({ onBack }) => {
     }
 
     setIsSpinning(true);
-    // EDM style dramatic pause
+
     setTimeout(() => {
-      const randomIndex = Math.floor(Math.random() * RESULTS.length);
-      setResult(RESULTS[randomIndex]);
+      // 核心邏輯判斷
+      if (FIXED_RESULTS[code]) {
+        // 如果輸入的號碼在固定清單中，直接設定結果
+        setResult(FIXED_RESULTS[code]);
+      } else {
+        // 如果不在清單中，從隨機池抽一個
+        const randomIndex = Math.floor(Math.random() * RANDOM_RESULTS.length);
+        setResult(RANDOM_RESULTS[randomIndex]);
+      }
+      
       setIsSpinning(false);
     }, 1200);
   };
@@ -44,6 +65,7 @@ const Redemption: React.FC<RedemptionProps> = ({ onBack }) => {
     setCode('');
   };
 
+  // --- 以下 UI 部分維持不變 ---
   if (result) {
     return (
       <div className="flex flex-col items-center gap-8 animate-in zoom-in duration-300">
