@@ -42,7 +42,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             className="h-40 md:h-52"
           >
             <div className="flex flex-col items-center">
-              <span className="text-2xl mb-2 pixel-chinese">向壽星告解區</span>
+              <span className="text-2xl mb-2 pixel-chinese">今晚想對壽星說</span>
               <span className="pixel-font text-[10px] opacity-70">DRUNK TRUTHS</span>
             </div>
           </PixelButton>
