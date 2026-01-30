@@ -23,7 +23,7 @@ const DrunkTruths: React.FC<DrunkTruthsProps> = ({ onNavigate, onBack }) => {
           onClick={() => onNavigate(View.PADLET_HOOVER)}
           className="h-24"
         >
-          <span className="pixel-chinese text-xl md:text-2xl">Hoover｜Hoover</span>
+          <span className="pixel-chinese text-xl md:text-2xl">Hoover</span>
         </PixelButton>
 
         <PixelButton 
@@ -32,7 +32,7 @@ const DrunkTruths: React.FC<DrunkTruthsProps> = ({ onNavigate, onBack }) => {
           onClick={() => onNavigate(View.PADLET_LARRY)}
           className="h-24"
         >
-          <span className="pixel-chinese text-xl md:text-2xl">Larry｜Larry</span>
+          <span className="pixel-chinese text-xl md:text-2xl">Larry</span>
         </PixelButton>
 
         <div className="mt-4">
